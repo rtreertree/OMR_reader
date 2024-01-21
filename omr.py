@@ -25,4 +25,4 @@ if __name__ == "__main__":
     img = cv.imread("/Users/tanakornpisuchpen/Program/python/imgProcessing/production/IMG_2341.png")
     reader = Reader(img)
     student_id, answers = reader.read()
-    print(student_id)
+    print(student_id, answers)

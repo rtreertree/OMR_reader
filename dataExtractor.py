@@ -23,14 +23,9 @@ def extract_data(imglist):
             maxindex = i
         elif score < secondscore:
             secondscore = score
-
-        if i == -1:
-            cv.imshow(f"img score : {score}", img)
-            cv.waitKey(0)
-            cv.destroyAllWindows()
         
     # print(minscore, secondscore, maxindex+1)
-    if secondscore - minscore > 100:
+    if secondscore - minscore > 60:
         return maxindex + 1
     else:
         return -1

@@ -17,3 +17,18 @@ This project is dedicated to gaining a thorough understanding of Optical Mark Re
     2. Read the answer from the captured POI
 4. Return all extracted data
 
+### Usage & Implement
+This function is designed to operate with either the 'AnswerSheet.pdf' or 'AnswerSheet.png' pattern.
+1. dowload file `omr.py`, `imageUtils.py`, `dataExtractor.py`
+2. create a class
+```python:
+import omr
+import cv2
+
+image = cv2.imread("imgPath.png")
+
+reader = omr.Reader(image)
+student_id, answers = reader.read()
+
+print(student_id, answers)
+```
